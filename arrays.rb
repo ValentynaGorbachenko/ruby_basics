@@ -1,5 +1,7 @@
 puts "Arrays practice"
-
+k = Array.new(10)
+puts k.to_s
+  
 arr_str = Array("a"..."z")
 arr_str << "z"
 puts "arr_str = Array(\"a\"...\"z\"); arr_str << \"z\" => #{arr_str} \n\n"
