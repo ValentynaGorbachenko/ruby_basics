@@ -39,3 +39,5 @@ puts "\narr4 = arr2.map{|i| puts i} => #{arr4} and arr2 is #{arr2}"
 
 arr5 = arr2.map! {|i| puts i}
 puts "\narr5 = arr2.map! {|i| puts i} => #{arr5} and arr2 is #{arr2}"
+ 
+# .push .insert .pop .delete .slice .join .shuffle .sort .reverse .index .at .fetch .fill .flatten
