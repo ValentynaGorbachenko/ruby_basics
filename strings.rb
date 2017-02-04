@@ -20,3 +20,13 @@ puts "str => " + str
 puts "str<<str => " +str<<str
 
 puts "str.concat('5') =>"+str.concat('5')+ " and str is #{str}"
+
+puts "str.empty? => #{str.empty?}" 
+
+puts "''.empty? => #{''.empty?}"
+
+puts "str.split => #{str.split} and str is #{str}"
+
+puts "str.split('') => #{str.split('')} and str is #{str}"
+
+
