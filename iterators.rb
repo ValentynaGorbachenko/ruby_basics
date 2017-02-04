@@ -33,4 +33,10 @@ puts (1..10).reject { |i| i % 3 == 0 }.to_s
 
 # .upto(limit) -> iterates block up to the int number
 5.upto(10) { |i| print i, " " }
+puts "  "
 
+
+puts 10.times.map{ Random.rand(10..20) }.to_s
+#=> [26, 26, 22, 20, 30, 26, 23, 23, 25, 22]
+
+puts 10.times.map{(0...5).map{ (97+rand(26)).chr }.join}.to_s
