@@ -10,6 +10,9 @@ RSpec.describe Stack do
     it { is_expected.to have_attributes(:data_store => []) }
     it { is_expected.to have_attributes(:back => 0)}
     it { is_expected.to have_attributes(:size => 0)}
+    it "does raise NoMethodError on assignment of back property" do
+      expect { @stack.back = 5 }.to raise_error(NoMethodError)
+    end
   end
   describe 'should have updated attributes after modifications' do
     before do
