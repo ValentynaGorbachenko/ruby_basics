@@ -11,11 +11,16 @@ class Stack
     @data_store.empty?
   end
   def push(item)
-    @data_store.push(item)
     @back = item
+    @data_store[self.size] = item
     self
   end
   def pop
+    if self.size >= 2
+      @back = @data_store.at(self.size-2)
+    else
+      @back = 0
+    end
     @data_store.pop if !self.is_empty
   end
 end

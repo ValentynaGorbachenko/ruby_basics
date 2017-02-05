@@ -20,7 +20,8 @@ RSpec.describe Stack do
       expect(@stack.data_store).to eq([1,2])
     end
     it 'has an attribute, back, which displays the last value in the Stack. Should be 0 by default and a user should not be able to set the back attribute' do
-      expect(@stack.back).to be(2)
+      expect(@stack.back).to eq(2)
+      expect(@stack.data_store).to eq([1,2])
     end
     it 'has a push method which adds a new value to the end of the Stack' do
       @stack.push(3)
@@ -30,6 +31,12 @@ RSpec.describe Stack do
       expect(@stack.pop).to eq(2)
       expect(@stack.pop).to eq(1)
       expect(@stack.pop).to eq(nil)
+    end
+    it 'has back property chenged after poping the last elem and it returns 0 when the Stack is empty' do
+      @stack.pop
+      expect(@stack.back).to eq(1)
+      @stack.pop
+      expect(@stack.back).to eq(0)
     end
     it 'has a size method that returns a size of the Stack' do
       expect(@stack.size).to be(2)
